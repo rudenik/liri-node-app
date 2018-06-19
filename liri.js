@@ -6,19 +6,16 @@ var twitterAPI = require('twitter');
 var requests = require('request');
 var moment = require('moment');
 
-const noSongSpecified = "The Sign"
-const noMovieSpecified = "Mr. Nobody"
-
 var spotify = new spotifyAPI(keys.spotify);
 var tClient = new twitterAPI(keys.twitter);
 
 var acceptedCmds = ["my-tweets", "spotify-this-song", "movie-this", "do-what-it-says"]
 var args = process.argv;
 var cmd = acceptedCmds.indexOf(args[2]);
+
 runThisNode(cmd, args[3]);
 
 function runThisNode(command, searched){
-
 
 switch (command){
     case 0:
@@ -26,8 +23,6 @@ switch (command){
     var params = {screen_name: 'thelargechild'};
     tClient.get('statuses/user_timeline', params, function(error, tweets, response){
         if(!error){
-            // console.log(tweets);
-            // console.log(response);
             for (ele in tweets){
                 console.log("Tweeted At: " + tweets[ele].created_at);
                 console.log("The Tweet Said: \n" + tweets[ele].text);
@@ -37,14 +32,16 @@ switch (command){
         }
         logQuery("Twitter", "My Tweets", "tweets - 20");
     });
-
     break;
+
     case 1:
     // console.log("Spotify");
     var searchTerm=searched;
+
     if(!searched){
         searchTerm="The Sign ace of base"
     }
+
     spotify.search({ type: 'track', query: searchTerm, limit: 1}, function(err, data){
         if(err){
             return console.log("Error occurred: " +err);
@@ -53,7 +50,12 @@ switch (command){
         var songName = JSON.stringify(data.tracks.items[0].name);
         var albumName = JSON.stringify(data.tracks.items[0].album.name);
         var preview = JSON.stringify(data.tracks.items[0].preview_url);
-        preview = preview.slice(1, -1);
+        if(preview != "null"){
+            preview = preview.slice(1, -1);
+        }else{
+            preview = "No Preview Available";
+        }
+        
         var stringToPrint = "\nYour Search resulted with the following results \n" +
             "Artist Name: " + artist +
             "\nSong Name: " + songName +
@@ -65,11 +67,13 @@ switch (command){
 
     break;
     case 2:
-    console.log("OMDB");
+    // console.log("OMDB");
     var searchTerm=searched;
+
     if(!searched){
         searchTerm="Mr. Nobody"
     }
+
     var queryUrl = "http://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&apikey=8252a0f9";
     requests(queryUrl, function(error, response, body) {
         if(!error){
@@ -93,33 +97,28 @@ switch (command){
         }else{
             console.log("OMDB Error: " + error);
         }
-        
     });
-
     break;
+
     case 3:
     console.log("readFile");
     fs.readFile("random.txt", "UTF-8", function(err, data){
         if(!err){
             var myFile = data
             var twoTerms = myFile.split(",");
-
             runThisNode(acceptedCmds.indexOf(twoTerms[0]), twoTerms[1]);
-            // console.log(twoTerms);
         }else{
             console.log(err);
         }
         
     })
-
-
     break;
 
 }
 }
 
 function logQuery(service, queryTerm, result){
-    var stringToLog=("\nUsed " + service + " to search for: " + queryTerm + "\n"+ "The Result was: " + result + "\n"+moment().format('MMMM Do YYYY, h:mm:ss a') + "\n" );
+    var stringToLog=("\nAt " + moment().format('MMMM Do YYYY, h:mm:ss a') + "\nYou Used " + service + " to search for: " + queryTerm + "\n"+ "The Result was: " + result + + "\n" );
     fs.appendFile("log.txt", stringToLog, "UTF-8", function(err){
         if (err){
             console.log(err);
