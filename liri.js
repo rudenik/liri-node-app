@@ -11,9 +11,15 @@ var tClient = new twitterAPI(keys.twitter);
 
 var acceptedCmds = ["my-tweets", "spotify-this-song", "movie-this", "do-what-it-says"]
 var args = process.argv;
-var cmd = acceptedCmds.indexOf(args[2]);
-
-runThisNode(cmd, args[3]);
+if(!args[2]){
+    console.log("Please use one of the following commands")
+    console.log(acceptedCmds);
+    console.log("With an appropriate query specific to the service");
+    logQuery("Nothing", " Zilch, ", "You messed up")
+}else{
+    var cmd = acceptedCmds.indexOf(args[2]);
+    runThisNode(cmd, args[3]);
+}
 
 function runThisNode(command, searched){
 
@@ -118,7 +124,7 @@ switch (command){
 }
 
 function logQuery(service, queryTerm, result){
-    var stringToLog=("\nAt " + moment().format('MMMM Do YYYY, h:mm:ss a') + "\nYou Used " + service + " to search for: " + queryTerm + "\n"+ "The Result was: " + result + + "\n" );
+    var stringToLog=("\nAt " + moment().format('MMMM Do YYYY, h:mm:ss a') + "\nYou Used " + service + " to search for: " + queryTerm + "\n"+ "The Result was: " + result + "\n" );
     fs.appendFile("log.txt", stringToLog, "UTF-8", function(err){
         if (err){
             console.log(err);

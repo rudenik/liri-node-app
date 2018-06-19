@@ -458,3 +458,79 @@ Album Name: "Night Train"
 Song Preview Url
 https://p.scdn.co/mp3-preview/07a5a4eef5bda10e28b72ce53a901b81b5679e19?cid=011517fad74b4546ac944e07ee9aa0fc
 0
+At June 19th 2018, 3:55:05 pm
+You Used OMDB to search for: inception
+The Result was: 
+Title: Inception
+Year: 2010
+Rotten Tomatoes Rating: 86%
+IMDB Rating: 8.8/10
+Country: USA, UK
+Language: English, Japanese, French
+Plot: A thief, who steals corporate secrets through the use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.
+Actors: Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy
+0
+At June 19th 2018, 4:02:31 pm
+You Used Spotify to search for: Go West
+The Result was: 
+Your Search resulted with the following results 
+Artist Name: "Go West"
+Song Name: "The King of Wishful Thinking"
+Album Name: "Indian Summer"
+Song Preview Url
+https://p.scdn.co/mp3-preview/a4622ccfa84c158b99e53069184020b16cd2d00a?cid=011517fad74b4546ac944e07ee9aa0fc
+0
+At June 19th 2018, 4:02:42 pm
+You Used Spotify to search for: Dancing Queen
+The Result was: 
+Your Search resulted with the following results 
+Artist Name: "ABBA"
+Song Name: "Dancing Queen"
+Album Name: "Arrival"
+Song Preview Url
+No Preview Available
+0
+At June 19th 2018, 4:03:02 pm
+You Used OMDB to search for: Inception
+The Result was: 
+Title: Inception
+Year: 2010
+Rotten Tomatoes Rating: 86%
+IMDB Rating: 8.8/10
+Country: USA, UK
+Language: English, Japanese, French
+Plot: A thief, who steals corporate secrets through the use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.
+Actors: Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy
+0
+At June 19th 2018, 4:11:29 pm
+You Used OMDB to search for: Inception
+The Result was: 
+Title: Inception
+Year: 2010
+Rotten Tomatoes Rating: 86%
+IMDB Rating: 8.8/10
+Country: USA, UK
+Language: English, Japanese, French
+Plot: A thief, who steals corporate secrets through the use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.
+Actors: Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy
+0
+At June 19th 2018, 4:11:42 pm
+You Used Spotify to search for: "I Want it That Way"
+The Result was: 
+Your Search resulted with the following results 
+Artist Name: "Backstreet Boys"
+Song Name: "I Want It That Way"
+Album Name: "The Hits--Chapter One"
+Song Preview Url
+https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=011517fad74b4546ac944e07ee9aa0fc
+0
+At June 19th 2018, 4:12:43 pm
+You Used Bad to search for:  Query, 
+The Result was: No Results0
+At June 19th 2018, 4:14:57 pm
+You Used Nothing to search for:  Zilch, 
+The Result was: You messed up
+
+At June 19th 2018, 4:15:10 pm
+You Used Nothing to search for:  Zilch, 
+The Result was: You messed up
